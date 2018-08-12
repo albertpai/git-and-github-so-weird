@@ -1,6 +1,9 @@
-# This documents is dedicated to recording every weird thing that I have encountered when using git and github.
+## Git and gitub are so weird!
 
-## I. How to resolve a conflict in a team project?
+Because they are sooooo weird, I wrote this document to record every weird problem that I encountered so far...
+
+
+### I. How to resolve a conflict when working with a team project?
 1. You must execute `fetch` and `merge` first before `commit` and `push`, otherwise you can see a conflict, especially when I keep working on the same file.
 2. When there is a conflict, the `merge` command will tell you which of your files are conflicting with the incoming files.
 3. You can resolve the conflicts by choosing a version of code. You can also manually change the code.
@@ -11,22 +14,21 @@
 8. Just remember to run `fetch` and `merge` in advance and frequently to avoid this problem.
 
 
-## What are the normal procedures of uploading files to the team repo?
+## II. What are the normal procedures to uploead files to a team repo?
 1. Register the upstream
-- `git remote -v` List the current configured remote repository.
-- `git remote add upstream git@github.com:{team repo}.git` Specify a new remote upstream repository that will be synced with the fork.
-- `git remote -v` List the current configured remote repository.
+(1) `git remote -v` List the current configured remote repository.
+(2) `git remote add upstream git@github.com:{team repo}.git` Specify a new remote upstream repository that will be synced with the fork.
+(3) `git remote -v` List the current configured remote repository.
 2. Merge changes from upstream:
-- `git fetch upstream` Fetch the branches and their respective commits from the upstream repository.
-- `git checkout master` Enter your fork's local master branch.
-- `git merge upstream/master` Merge the changes from upstream/master into your local master branch. If your local branch didn't have any unique commits, Git will instead perform a 'fast-forward'.
+(1) `git fetch upstream` Fetch the branches and their respective commits from the upstream repository.
+(2) `git checkout master` Enter your fork's local master branch.
+(3) `git merge upstream/master` Merge the changes from upstream/master into your local master branch. If your local branch didn't have any unique commits, Git will instead perform a 'fast-forward'.
 
 
-## III. What can you do when you want to reverse a pushed commit to the github account?
-1.  Run this command:
-```
-git revert {id / hash}
-```
-2. Since the reverted files will be stored in the commit area, you need to push again to your repo.
-
-
+## III. How to revert a pushed commit in your github account?
+1. If you push a commit that you did not mean to, you may want to revert a commit.
+2. First of all, backup your correct files, because the files in your local folder would be entirely rewitten later.
+2. Run this command: `git revert {id / hash}` to safely undo all the changes that have been made in an unwanted pushed commit.
+3. Becasue the reverted files will be stored in the commit area, you must push everything again to your repo.
+4. Finally, copy your latest files back to the local github folder.
+5. Now, you can continue editing your files and upload to your repo again.
