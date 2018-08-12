@@ -1,10 +1,10 @@
 ## Git and gitub are so weird!
 
-Because they are sooooo weird, I write this document to record every weird problem that I encountered so far...
+Because they are sooooo weird, I write this document to record every weird problem that I have encountered so far.
 
 
 ### I. How to resolve a conflict when working with a team project?
-1. You must execute `fetch` and `merge` first before `commit` and `push`, otherwise you can see a conflict, especially when I keep working on the same file.
+1. You must execute `fetch` and `merge` first before running `commit` and `push`, otherwise you can see a conflict, especially when I keep working on the same file.
 2. When there is a conflict, the `merge` command will tell you which of your files are conflicting with the incoming files.
 3. You can resolve the conflicts by choosing a version of code. You can also manually change the code.
 4. When resolving all conflicts, usually you can execute `git add .`, `git commit` and `git push` to upload your files to your origin (your own repo).
@@ -16,9 +16,9 @@ Because they are sooooo weird, I write this document to record every weird probl
 
 ## II. What are the normal procedures to uploead files to a team repo?
 1. Register the upstream
-- Run `git remote -v` List the current configured remote repository.
+- Run `git remote -v`. List the current configured remote repository.
 - Run `git remote add upstream git@github.com:{team repo}.git`. Specify a new remote upstream repository that will be synced with the fork.
-- Run `git remote -v` List the current configured remote repository.
+- Run `git remote -v`. List the current configured remote repository.
 - Check this [web page](https://help.github.com/articles/configuring-a-remote-for-a-fork/).
 2. Merge changes from upstream:
 - Run `git fetch upstream`. Fetch the branches and their respective commits from the upstream repository.
