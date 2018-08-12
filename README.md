@@ -1,6 +1,6 @@
 ## Git and gitub are so weird!
 
-Because they are sooooo weird, I wrote this document to record every weird problem that I encountered so far...
+Because they are sooooo weird, I write this document to record every weird problem that I encountered so far...
 
 
 ### I. How to resolve a conflict when working with a team project?
