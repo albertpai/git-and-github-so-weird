@@ -16,13 +16,15 @@ Because they are sooooo weird, I wrote this document to record every weird probl
 
 ## II. What are the normal procedures to uploead files to a team repo?
 1. Register the upstream
-(1) `git remote -v` List the current configured remote repository.
-(2) `git remote add upstream git@github.com:{team repo}.git` Specify a new remote upstream repository that will be synced with the fork.
-(3) `git remote -v` List the current configured remote repository.
+- Run `git remote -v` List the current configured remote repository.
+- Run `git remote add upstream git@github.com:{team repo}.git`. Specify a new remote upstream repository that will be synced with the fork.
+- Run `git remote -v` List the current configured remote repository.
+- Check this [web page](https://help.github.com/articles/configuring-a-remote-for-a-fork/).
 2. Merge changes from upstream:
-(1) `git fetch upstream` Fetch the branches and their respective commits from the upstream repository.
-(2) `git checkout master` Enter your fork's local master branch.
-(3) `git merge upstream/master` Merge the changes from upstream/master into your local master branch. If your local branch didn't have any unique commits, Git will instead perform a 'fast-forward'.
+- Run `git fetch upstream`. Fetch the branches and their respective commits from the upstream repository.
+- Run `git checkout master`. Enter your fork's local master branch.
+- Run `git merge upstream/master`. Merge the changes from upstream/master into your local master branch. If your local branch didn't have any unique commits, Git will instead perform a 'fast-forward'.
+- Check this [web page](https://help.github.com/articles/syncing-a-fork/).
 
 
 ## III. How to revert a pushed commit in your github account?
