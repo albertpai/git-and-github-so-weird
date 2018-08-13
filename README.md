@@ -8,10 +8,8 @@ Because they are sooooo weird, I write this document to record every weird probl
 2. When there is a conflict, the `merge` command will tell you which of your files are conflicting with the incoming files.
 3. You can resolve the conflicts by choosing a version of code. You can also manually change the code.
 4. When resolving all conflicts, usually you can execute `git add .`, `git commit` and `git push` to upload your files to your origin (your own repo).
-5. If you cannot push, you can run `git push -f` to force your push.
-6. When you make a pull request to the upstream (team repo), conflicts can happen too. You can use the github interface to resolve the problem.
-7. After your pull request is approved, and suash and merge, the record can look a bit unusual, including extra information, but it should be fine.
-8. Just remember to run `fetch` and `merge` in advance and frequently to avoid this problem.
+5. If you cannot push, try to push in the terminal by runinng `git push`. You will get the instruction of how to solve the problem. (At this stage, avoid running `git push -f` to force your push. Otherwise, the problem might persist when you make a pull request to the team repo.)
+6. Remember to run `fetch` and `merge` in advance to avoid this problem. You cal also use `rebase` instead of `merge`.
 
 
 ## II. What are the normal procedures to uploead files to a team repo?
